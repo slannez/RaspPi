@@ -4,3 +4,6 @@ init() {
   apt-get install haskell-platform
   apt-get update haskell-platform
 }
+
+[ -z "$(which ghc)" ] && init
+
