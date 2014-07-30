@@ -1,0 +1,13 @@
+#!/bin/bash
+
+init() {
+  mkdir -p /tmp/build
+  cd /tmp/build
+  git clone https://github.com/mongodb/mongo-c-driver.git
+  cd mongo-c-driver
+  ./autogen.sh
+  make
+  sudo make install
+}
+
+init
