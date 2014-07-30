@@ -1,0 +1,5 @@
+#!/bin/bash
+
+stty -F /dev/ttyAMA0 -parodd -cstopb cs7 icrnl -igncr
+cat /dev/ttyAMA0 | sed -e 's/^\(.*\) \(.*\) \(.*\)/\1 \2/g' -e 's/ADCO/\nADCO/g'
+
