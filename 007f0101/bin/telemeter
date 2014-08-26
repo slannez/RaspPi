@@ -6,5 +6,5 @@ v0() {
 }
 
 gcc -pedantic -o /tmp/telemeter.out src/telemeter.c && \
-  /tmp/telemeter.out
+  /tmp/telemeter.out -f energy.ts 
 
